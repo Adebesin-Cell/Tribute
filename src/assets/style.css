@@ -1,0 +1,280 @@
+/*
+breakpoints
+
+phone-
+
+phone- 0 - 600px
+
+tab-port- 600 - 900px
+tab-land- 900 - 1200px
+Our normal styles apply - 1200- 1800px
+
+big-desktop- 1800px
+*/
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit; }
+
+::selection {
+  background-color: #777;
+  color: #fff; }
+
+html {
+  font-size: 62.5%;
+  box-sizing: border-box; }
+
+body {
+  font-family: "Alegreya", sans-serif;
+  font-size: 1.6rem;
+  line-height: 1.7;
+  font-weight: 500;
+  color: #777; }
+
+img {
+  object-fit: cover;
+  width: 100%;
+  height: 100%; }
+
+.heading {
+  border-bottom: 1px solid #C4C4C4; }
+  @media only screen and (max-width: 1000px) {
+    .heading {
+      text-align: center;
+      width: 100%;
+      margin-bottom: 5rem; } }
+  @media only screen and (max-width: 375px) {
+    .heading {
+      margin-top: 5rem; } }
+  .heading-secondary {
+    font-size: 2rem;
+    font-weight: 700;
+    color: #777; }
+    @media only screen and (max-width: 1000px) {
+      .heading-secondary {
+        width: 100%; } }
+  .heading__tertiary {
+    font-size: 2rem;
+    font-weight: 800; }
+
+.form {
+  width: 100%;
+  margin: 7rem auto;
+  backface-visibility: hidden; }
+  @media only screen and (max-width: 1000px) {
+    .form {
+      width: 100%;
+      margin: 0; } }
+  .form__container {
+    width: 100%; }
+  .form__input {
+    width: 100%;
+    height: 5rem;
+    margin-bottom: 2rem;
+    transition: all .3s; }
+  .form__area {
+    width: 100%;
+    height: 30rem; }
+  .form__input, .form__area {
+    display: block;
+    padding: 1rem;
+    font-family: inherit;
+    border-radius: 5px;
+    outline: none;
+    color: #777; }
+  .form__input:focus, .form__area:focus {
+    outline: none;
+    border-radius: 5px;
+    border: 2px solid #777; }
+
+.button {
+  /* left or right */
+  display: block;
+  margin: 0 auto;
+  width: 100%;
+  height: 4rem;
+  margin-top: 2rem;
+  border-radius: 3px;
+  border: 1px solid rgba(0, 0, 0, 0.8);
+  outline: none;
+  transition: all .5s;
+  color: #fff;
+  background-color: #777; }
+  .button:hover {
+    box-shadow: 0 0.3rem 0.1rem rgba(0, 0, 0, 0.8); }
+  .button:active {
+    box-shadow: 0 0.15rem 0.05rem rgba(0, 0, 0, 0.8); }
+
+.btn {
+  border: none;
+  outline: none;
+  border-bottom: 1px solid #C4C4C4;
+  font-size: 1.5rem;
+  color: #777;
+  transition: all .4s;
+  margin-left: auto;
+  margin-top: 6rem; }
+  .btn:hover span {
+    margin-left: 1rem; }
+  .btn:hover {
+    color: #777; }
+  .btn:focus {
+    border: none;
+    outline: none;
+    color: #777;
+    border-bottom: 1px solid #C4C4C4; }
+
+span {
+  transition: all .4s; }
+
+.comment {
+  width: 100%;
+  display: flex;
+  flex-direction: column; }
+  .comment__heading {
+    width: 100%;
+    border-bottom: 1px solid #C4C4C4;
+    align-self: flex-start;
+    margin-bottom: 5rem; }
+    @media only screen and (max-width: 1000px) {
+      .comment__heading {
+        width: 100%;
+        text-align: center; } }
+    @media only screen and (max-width: 375px) {
+      .comment__heading {
+        margin-top: 5rem; } }
+  .comment__box {
+    /* border: 1px solid black; */
+    padding: 1rem 3rem;
+    box-shadow: 0 0.1rem 0.5rem rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    transition: all .4s; }
+    @media only screen and (max-width: 375px) {
+      .comment__box {
+        width: 100%; } }
+    .comment__box:not(:last-child) {
+      margin-bottom: 2rem; }
+  .comment__box:hover {
+    transform: scale(1.03); }
+  .comment__avatar {
+    width: 10rem;
+    height: 10rem;
+    float: left;
+    border-radius: 50%;
+    position: relative;
+    overflow: hidden;
+    margin-right: 3rem; }
+    @supports (-webkit-clip-path: polygon(0 0)) or (clip-path: polygon(0 0)) {
+      .comment__avatar {
+        -webkit-clip-path: circle(50% at 50% 50%);
+        clip-path: circle(50% at 50% 50%);
+        -webkit-shape-outside: circle(50% at 50% 50%);
+        shape-outside: circle(50% at 50% 50%);
+        border-radius: none; } }
+    @media only screen and (max-width: 375px) {
+      .comment__avatar {
+        width: 5rem;
+        height: 5rem; } }
+  .comment__image {
+    height: 100%;
+    backface-visibility: hidden;
+    transition: all .5s; }
+  .comment__text {
+    font-size: 1.6rem;
+    font-weight: 700; }
+    @media only screen and (max-width: 576px) {
+      .comment__text {
+        font-size: 1.3rem; } }
+
+label:hover {
+  cursor: pointer; }
+
+@media only screen and (max-width: 500px) {
+  .carousel-inner .carousel-item img {
+    width: 100%;
+    height: 60rem; } }
+
+.footer__text {
+  font-size: 1.2rem;
+  font-weight: 300; }
+
+.footer .highlight {
+  color: rgba(0, 0, 0, 0.2); }
+
+.container {
+  display: flex;
+  flex-direction: column;
+  width: 90%;
+  margin: 5rem auto;
+  padding: 2rem;
+  box-shadow: 0 0.3rem 1.5rem rgba(0, 0, 0, 0.2); }
+  @media only screen and (max-width: 56.25em) {
+    .container {
+      margin: 0;
+      margin-right: 0;
+      max-width: 100%;
+      width: 100%;
+      flex-basis: 100% !important; } }
+
+.header {
+  background-color: rgba(0, 0, 0, 0.8);
+  height: 90vh;
+  overflow: hidden;
+  position: relative; }
+
+.main {
+  display: flex;
+  justify-content: center;
+  width: 100%; }
+  @media only screen and (max-width: 1000px) {
+    .main {
+      flex-direction: column; } }
+
+.section-comment {
+  flex: 0 0 40%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  padding: 7rem 3rem; }
+  @media only screen and (max-width: 1000px) {
+    .section-comment {
+      flex: 0 0 100%; } }
+  @media only screen and (max-width: 375px) {
+    .section-comment {
+      padding: 0; } }
+  @media screen and (max-width: 274px) {
+    .section-comment {
+      padding: 1rem 3rem; } }
+
+.section-gallery {
+  flex: 0 0 60%;
+  background-color: #fff;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  padding: 7rem 3.5rem;
+  border-left: 1px solid #C4C4C4; }
+  @media only screen and (max-width: 1000px) {
+    .section-gallery {
+      flex: 0 0 100%;
+      border-left: none;
+      order: -1; } }
+  @media only screen and (max-width: 375px) {
+    .section-gallery {
+      padding: 0; } }
+
+.footer {
+  border-top: 1px solid #C4C4C4;
+  background-color: #fff;
+  width: 100%;
+  height: 100%;
+  background-color: #777;
+  color: #fff;
+  padding: 3rem 7rem; }
+  @media only screen and (max-width: 375px) {
+    .footer {
+      margin-top: 10rem;
+      padding: 1rem 3rem; } }
