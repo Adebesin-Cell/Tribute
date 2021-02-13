@@ -43,11 +43,11 @@
                 <div class="form__container">
                   <div class="form__group">
                     <label for="name">Your name: </label>
-                    <input type="text" name="name" id="name" v-model="name" class="form__input" placeholder="Your name...">
+                    <input type="text" name="name" id="name" v-model="name" class="form__input" placeholder="Your name..." required>
                   </div>
                   <div class="form__group">
                     <label for="message">Your comment:</label>
-                    <textarea name="comment" id="message" v-model="message" rows="5" cols="30" class= "form__area" placeholder="message here..."></textarea>
+                    <textarea name="comment" id="message" v-model="message" rows="5" cols="30" class= "form__area" placeholder="message here..." required></textarea>
                   </div>
                 </div>
 
@@ -67,30 +67,14 @@
                 </div>
 
                 <paginate name="messages" :list="messages" :per="5" v-if="shown">
-             <!-- <div class="col-md-12 mb-4" v-for="(blog, index) in paginated('blogs')" :key="index"> -->
-                 <!-- <div class="card">
-                     <div class="card-body">
-                         <div class="row">
-                             <div class="col-md-2">
-                                 <img src="@/assets/blog.jpg" alt="" class="img-fluid">
-                             </div>
-                             <div class="col-md-10 text-left">
-                                 <router-link :to="'viewBlogs/' + blog.id" class="h5 font-weight-bold text-dark">{{blog.title}}</router-link>
-                                 <p>{{blog.body}}</p>
-                             </div>
-                         </div>
-                     </div>
-                 </div> -->
-             <!-- </div> -->
                 <!-- <div class="comment__container"> -->
                   <div class="comment__box" v-for="(message, index) in paginated('messages')" :key="index">
                     <div class="comment__avatar">
-                      <img src="../assets/avatar-anisha.png" alt="avatar image" class="comment__image">
+                      <img src="../assets/avatar.png" alt="avatar image" class="comment__image img-fluid">
                     </div>
                     <div class="comment__title">
                       <h3 class="heading__tertiary">{{message.name}}</h3>
                     </div>
-
                     <p class="comment__text">
                      {{message.message}}
                     </p>
@@ -99,9 +83,6 @@
              </paginate>
 
               </div>
-              <!-- <button class="btn btn--more">
-                See more! <span>&rarr;</span>
-              </button> -->
               <div class="pagination text-center">
                     <paginate-links for="messages" :async="true" :show-step-links="true" :step-links="{
                         next: 'Next',
@@ -161,7 +142,7 @@ export default {
   },
   mounted(){
     $('.carousel').carousel({
-    interval: 1000
+    interval: 3000
   },"cycle");
 
   },
