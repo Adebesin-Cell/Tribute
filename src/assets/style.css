@@ -32,11 +32,11 @@ body {
   line-height: 1.7;
   font-weight: 500;
   color: #777; }
-
+/* 
 img {
   object-fit: cover;
   width: 100%;
-  height: 100%; }
+  height: 100%; } */
 
 .heading {
   border-bottom: 1px solid #C4C4C4; }
@@ -57,7 +57,15 @@ img {
         width: 100%; } }
   .heading__tertiary {
     font-size: 2rem;
-    font-weight: 800; }
+    font-weight: 800; 
+  
+  }
+
+  @media only screen and (max-width: 600px) {
+
+    .heading__tertiary{
+    margin-top: 1rem;}
+  }
 
 .form {
   width: 100%;
@@ -132,7 +140,18 @@ span {
 .comment {
   width: 100%;
   display: flex;
-  flex-direction: column; }
+  flex-direction: column; 
+
+  margin-bottom: 4rem;
+
+
+}
+
+@media only screen and (max-width: 600px) {
+  .comment {
+    margin-bottom: 3rem;
+  }
+}
   .comment__heading {
     width: 100%;
     border-bottom: 1px solid #C4C4C4;
@@ -159,9 +178,9 @@ span {
   .comment__box:hover {
     transform: scale(1.03); }
   .comment__avatar {
-    width: 10rem;
-    height: 10rem;
-    float: left;
+    width: 8rem;
+    height: 8rem;
+    /* float: left; */
     border-radius: 50%;
     position: relative;
     overflow: hidden;
@@ -173,10 +192,31 @@ span {
         -webkit-shape-outside: circle(50% at 50% 50%);
         shape-outside: circle(50% at 50% 50%);
         border-radius: none; } }
+
+        
+    @media only screen and (max-width: 1024px) {
+      .comment__avatar {
+        width: 4.5rem;
+        height: 4.5rem;
+      }
+    }
+
+    @media only screen and (max-width: 700px) {
+      .comment__avatar {
+        width: 4rem;
+        height: 4rem;
+      }
+    }
+
+    @media only screen and (max-width: 575px) {
+      .comment__avatar {
+        width: 3rem;
+        height: 3rem; }
+    }
     @media only screen and (max-width: 375px) {
       .comment__avatar {
-        width: 5rem;
-        height: 5rem; } }
+        width: 3rem;
+        height: 3rem; } }
   .comment__image {
     height: 100%;
     backface-visibility: hidden;
@@ -219,10 +259,18 @@ label:hover {
       flex-basis: 100% !important; } }
 
 .header {
-  background-color: rgba(0, 0, 0, 0.8);
+
   height: 90vh;
   overflow: hidden;
   position: relative; }
+
+  @media only screen and (max-width: 600px) {
+
+    .header {
+    height: 60vh;
+
+    }
+  }
 
 .main {
   display: flex;
@@ -244,7 +292,7 @@ label:hover {
       flex: 0 0 100%; } }
   @media only screen and (max-width: 375px) {
     .section-comment {
-      padding: 0; } }
+      padding: 1rem; } }
   @media screen and (max-width: 274px) {
     .section-comment {
       padding: 1rem 3rem; } }
@@ -264,7 +312,7 @@ label:hover {
       order: -1; } }
   @media only screen and (max-width: 375px) {
     .section-gallery {
-      padding: 0; } }
+      padding: 1rem; } }
 
 .footer {
   border-top: 1px solid #C4C4C4;
