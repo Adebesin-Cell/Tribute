@@ -117,7 +117,7 @@ export default {
   },
   methods:{
     postMessage(){
-      this.axios.post('https://tribute-27bf0-default-rtdb.firebaseio.com/message.json',{
+      this.axios.post('https://tribute-db3bf-default-rtdb.firebaseio.com/message.json',{
         name: this.name,
         message: this.message
       }).then(response =>{
@@ -129,7 +129,7 @@ export default {
       })
     },
     showMessage(){
-      this.axios.get('https://tribute-27bf0-default-rtdb.firebaseio.com/message.json').then(response =>{
+      this.axios.get('https://tribute-db3bf-default-rtdb.firebaseio.com/message.json').then(response =>{
       console.log(response.data)
       for(let key in response.data){
         response.data[key].id = key
